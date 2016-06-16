@@ -45,36 +45,60 @@ config.properties
 下面针对每项进行介绍：
 
 远程ddns服务器主机地址，这个参数一般不需要改变，由作者分配
+
 remote_server_domain=ddns.mocoder.com
+
 远程ddns服务器主机端口，这个参数一般不需要改变，由作者分配
 remote_server_port=3333
+
 本地服务器的访问超时时间，以毫秒为单位，默认为15秒，一般不需要修改。如果浏览器请求超过这个时间，会放弃接受本地服务器的返回信息，并通知浏览器超时
 request_timeout=15000
+
 如果超过以下设定的时间没有人通过外网访问您的项目，客户端会自动退出，默认是600秒，即10分钟。当然，如果您设置足够大话，moddns服务器端也会主动断开连接
+
 idle_before_exit=600000
+
 客户端连接出现错误达到以下次数时将自动退出
+
 error_count_before_exit=3
+
 缓冲区和传输块大小，这个设置比较关键，不可修改。
+
 buffer_size=2048
+
 日志文件输出日志等级，有效选项为 debug、info、warn、error
+
 log_level=info
+
 日志文件路径：可为相对或者绝对路径，相对路径当前路径为当前classpath
+
 log_path=./client.log
+
 
 一下信息需要您手动修改
 
 您的账号Id，具体联系作者或管理员
+
 user_id=test
+
 你的密码，这个不用多说
+
 password=1234
 分配给你的n级域名，比如申请的时候给您的是test.ddns.mocoder.com ,而服务器域名是 ddns.mocoder.com,则这里写test。
+
 personal_domain=test
+
 您本地服务器的主机名，如localhost、127.0.0.1等等，当然，当前没有限制必须是本机
+
 local_server_host=localhost
+
 您的本地服务器的端口
+
 local_server_port=8080
 
+
 client.log
+
 
 日志输出文件，无特殊情况，你可以把config.properties内的log_level设置为info，以避免过多的日志输出占用系统资源。另外您使用时遇到不明原因的错误可以向作者提交此日志文件以帮助作者分析。
 
